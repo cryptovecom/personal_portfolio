@@ -30,7 +30,7 @@ body {
 }
 
 .login-container h1 {
-  font-size: 22x;
+  font-size: 28px;
   font-style: normal;
   font-family: "Segoe UI Symbol";
   margin-bottom: 20px;
@@ -53,11 +53,16 @@ body {
   font-weight: 600;
   margin-bottom: 5px;
 }
+
+.login-container .phone-number {
+  display: flex;
+  gap: 10px;
+}
+
 input[type="email"] {
   width: 93%;
   padding: 10px;
   margin-bottom: 10px;
-  /* border: 1px solid #ddd; */
   border: none;
   outline: none;
   border-radius: 4px;
@@ -74,6 +79,64 @@ input[type="email"]:focus {
   border-bottom: 2px solid #0fadff;
 }
 
+input[type="number"] {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+}
+
+input[type="number"]:hover {
+  border: 1px solid #0fadff;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #0fadff;
+}
+
+.phone-number select {
+  width: 40%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+}
+
+.phone-number select:hover {
+  border: 1px solid #0fadff;
+}
+
+.phone-number select:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #0fadff;
+}
+
+.additional-action {
+  cursor: pointer;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container .input-form p{
+  color: #777 !important;
+  text-align: left;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+
+
 .login-container button {
   background-color: #42bfff;
   color: white;
@@ -83,13 +146,14 @@ input[type="email"]:focus {
   padding: 11px 24px 10px;
   font-size: 14px;
   line-height: 17px;
-  width: auto;
+  width: 28%;
+  margin: auto;
   border: 1px solid #d6d6d6;
   font-weight: 500;
 }
 
 .login-container .additional-action {
-  margin: 4px 24px 16px;
+  margin: 4px 0 16px 0;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
@@ -147,6 +211,7 @@ footer {
 
 .footer-container-sm .language-selector {
   padding: 0 30px;
+  width: 90%;
 }
 
 .footer-container-sm select {
@@ -214,6 +279,11 @@ footer {
   text-decoration: underline;
 }
 
+.language-selector {
+  width: 70%;
+
+}
+
 .language-selector h4 {
   padding-top: 20px;
   font-size: 14px;
@@ -224,6 +294,7 @@ footer {
 .language-selector select {
   padding: 5px;
   font-size: 14px;
+  background-size: 5px;
 }
 
 .footer-bottom {
@@ -253,11 +324,6 @@ footer {
   text-underline-offset: 4px;
 }
 
-
-.footer-container-sm {
-
-}
-
 .footer-container-sm .section a {
   text-decoration: none;
   color: #656b73;
@@ -271,16 +337,6 @@ footer {
 }
  
 .footer-container-sm .toggle-button {
-  /* background: none;
-  border: none;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  display: flex;
-  gap: 10px;
-  width: 100%;
-  text-align: left; */
-
   cursor: pointer;
   border: none;
   display: flex;
@@ -307,10 +363,6 @@ footer {
 
 .toggle-button.active .footer-arrow {
   rotate: 90deg;
-}
-
-.footer-column-header {
-  
 }
 
 .footer-container-sm .items {
