@@ -16,11 +16,13 @@
     <form>
       <label>Username or Email</label>
       <input type="email">
-      <a href="#">Use phone number instead</a>
+      <div class="additional-action">
+        <a>Use phone number instead</a>
+      </div>
       <button type="submit">Next</button>
     </form>
   </div>
-  <p class="signup-container">New to Snapchat? <a href="#">Sign Up</a></p>
+  <p class="signup-container">New To Snapchat? <a href="#" class="sign-up">Sign Up</a></p>
 
   <footer>
     <div class="footer-container">
@@ -71,6 +73,63 @@
         </ul>
       </div>
     </div>
+    <div class="footer-container-sm">
+      <div class="section">
+        <div class="toggle-button">
+          <div class="footer-arrow">
+            <svg width="15" height="20" fill="rgba(0,0,0,.87)"><g><rect stroke="rgba(0,0,0,.87)" transform="rotate(45 0,0)" rx="1" id="1" height="1.5" width="10" y="-2" x="5" stroke-width="1"></rect><rect stroke="rgba(0,0,0,.87)" transform="rotate(-45 0,0)" rx="1" id="2" height="1.5" width="10" y="13.5" x="-8" stroke-width="1"></rect></g></svg>
+          </div>
+          <div class="footer-column-header">Company</div>
+        </div>
+        <ul class="items">
+          <li><a href="#">Snap Inc.</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div>
+  
+      <div class="section">
+        <button class="toggle-button">Community</button>
+        <ul class="items">
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Community Guidelines</a></li>
+          <li><a href="#">Safety Center</a></li>
+        </ul>
+      </div>
+  
+      <div class="section">
+        <button class="toggle-button">Advertising</button>
+        <ul class="items">
+          <li><a href="#">Buy Ads</a></li>
+          <li><a href="#">Advertising Policies</a></li>
+          <li><a href="#">Political Ads Library</a></li>
+          <li><a href="#">Brand Guidelines</a></li>
+          <li><a href="#">Promotions Rules</a></li>
+        </ul>
+      </div>
+  
+      <div class="section">
+        <button class="toggle-button">Legal</button>
+        <ul class="items">
+          <li><a href="#">Privacy Center</a></li>
+          <li><a href="#">Your Privacy Choices</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Report Infringement</a></li>
+          <li><a href="#">Custom Creative Tools Terms</a></li>
+          <li><a href="#">Community Geofilter Terms</a></li>
+          <li><a href="#">Lens Studio Terms</a></li>
+        </ul>
+      </div>
+  
+      <div class="language">
+        <label for="language-select">Language</label>
+        <select id="language-select">
+          <option value="en-US">English (US)</option>
+          <option value="en-UK">English (UK)</option>
+          <option value="es">Español</option>
+        </select>
+      </div>
+    </div>
     
   </footer>
   <div class="footer-bottom">
@@ -79,6 +138,21 @@
       <a href="#">Terms of Service</a>
     </div> 
   </div>
+  <script>
+    document.querySelectorAll('.toggle-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const items = button.nextElementSibling;
+        if (items) {
+          items.style.display = items.style.display === 'block' ? 'none' : 'block';
+        }
+        if (button.classList.contains('active')) {
+          button.classList.remove('active');
+        } else {
+          button.classList.add('active');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
