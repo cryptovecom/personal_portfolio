@@ -1,0 +1,263 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     outline: none;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-size: 17px;
+    font-weight: 400;
+    font-family: SF Pro Text, Helvetica Neue, sans-serif;
+}
+
+.cloudos-toolbar {
+    width: 100%;
+    top: 0;
+    height: 44px;
+    min-height: 44px;
+    padding-left: 16px;
+    padding-right: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: none;
+    background-color: rgba(251, 251, 253, .5);
+    border-block-end: 1px solid rgba(251, 251, 253, .5);
+}
+
+.home-login-component {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+    block-size: 610px;
+    transition: opacity .15s;
+}
+
+.parent-container {
+    width: 100%;
+    inline-size: 640px;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.widget-icon-text {
+    left: 0;
+    right: 0;
+    margin-top: 40px;
+    margin-left: 80px;
+    margin-right: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-in-label {
+    margin-top: 20px;
+    font-family: SF Pro Display, Helvetica Neue, sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 36px;
+    color: var(--theme-color-labelPrimary);
+    margin-block-start: 20px;
+    text-align: center;
+}
+
+.sw-field-container {
+    max-width: 480px;
+    width: 480px;
+    position: relative;
+    outline: none;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+.form-cell-wrapper{
+    /* height: 3.3em;
+    position: relative;
+    width: 100%;
+    border-width: 1px;
+    border-color: gray;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column; */
+    position: relative;
+    height: 3.3em;
+    margin: 0;
+    box-shadow: none;
+    border: 0;
+    border-radius: 6px;
+    border-color: transparent;
+}
+
+.form-cell-wrapper span {
+    display: flex;
+    padding-left: 16px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-container input {
+    width: 90%;
+}
+
+.form-checkbox {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    margin: 18px 0 16px;
+    color: #494949;
+    font-size: 17px;
+}
+
+.si-container-footer {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    padding-bottom: 9px;
+    color: #06c;
+}
+
+.create-account{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;  
+    color: #06c;  
+}
+
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    font-family: SF Pro Text, Helvetica Neue, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.56);;
+}
+
+.legal-footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    background-color: #f2f2f7;
+    
+    /* flex-direction: column; */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.application-content {
+    margin: auto;
+    max-width: 690px;
+    max-inline-size: 690px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+@media (min-width: 768px) {  
+    .parent-container {
+        width: 640px;
+        height: 610px;
+        margin-top: 44px;
+        inline-size: 640px;
+        margin-block-start: 44px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 11px 34px 0 rgba(120, 120, 128, 0.16);;
+        border-radius: 34px;
+        backdrop-filter: blur(10px);
+        background-color: hsl(0, 0%, 100%);
+    }  
+} 
+
+@media (min-width: 400px) {
+    body {
+        width: 100vw;
+    }
+}
+
+/* Tailwind's hidden class with animation for smoother transition */
+.fade-in-next-btn {
+    animation: fadeInNextBtn 0.3s ease-in-out forwards;
+  }
+
+  .fade-out-next-btn {
+    animation: fadeOutNextBtn 0.3s ease-in-out forwards;
+  }
+
+  @keyframes fadeInNextBtn {
+    from {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes fadeOutNextBtn {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+
+  .fade-in-password {
+    animation: fadeInPassword 0.5s ease-in-out forwards;
+  }
+
+  .fade-out-password {
+    animation: fadeOutPassword 0.5s ease-in-out forwards;
+  }
+
+  @keyframes fadeInPassword {
+    from {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(1px);
+    }
+  }
+
+  @keyframes fadeOutPassword {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(1px);
+    }
+  }

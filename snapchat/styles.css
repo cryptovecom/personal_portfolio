@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #cccbcb;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.login-container {
+  text-align: center;
+  background: #fff;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+}
+
+.login-container img {
+  width: 60px;
+}
+
+.login-container h1 {
+  font-size: 22x;
+  font-style: normal;
+  font-family: "Segoe UI Symbol";
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.login-container p {
+  font-size: 14px;
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+.login-container label {
+  color: #656b73;
+  font-size: 14px;
+}
+input[type="email"] {
+  width: 93%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.login-container button {
+  background-color: #42bfff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 28%;
+  font-size: 14px;
+}
+
+.login-container a {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.signup-container {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 170px;
+}
+
+footer {
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  padding: 20px 50px;
+}
+
+.footer-container {
+  max-width: 1070px;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+@media (max-width: 768px) {  
+  .footer-container {
+    flex-direction: column;
+  }  
+} 
+
+.footer-section {
+  flex: 1;
+  min-width: 150px;
+}
+
+.footer-section h4 {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #777;
+  font-size: 13px;
+}
+.footer-section ul li a:hover{
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-color: rgb(0, 89, 255);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.language-selector h4 {
+  padding-top: 20px;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.language-selector select {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.footer-bottom {
+  text-align: left;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  background-color: rgb(38, 38, 38);
+  height: 40px;
+}
+
+.footer-a-container{
+  max-width: 1070px;
+  margin: auto;
+}
+.footer-a-container a {
+  margin: 0 10px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #777;
+}
+
+.footer-bottom a:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: yellow;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
