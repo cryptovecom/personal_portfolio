@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot de Jesús</title>
+    <!-- Enlazando correctamente el archivo CSS desde la carpeta estática -->
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body 
+    class="w-full h-screen flex flex-col justify-start items-center m-0 p-10"
+    style="font-family: Arial, sans-serif;"
+>
+    <div class="chat-container flex flex-col items-center mt-10 pt-10 px-10 w-full md:w-4/5 lg:w-3/5 h-4/5 bg-white rounded-lg shadow">
+        <h1 class="text-3xl">Chatbot de Jesús</h1>
+        <div id="chatbox" class="chatbox w-full overflow-x-auto mb-2.5 p-2.5"> </div>
+        <!-- Campo de entrada para el mensaje del usuario -->
+        
+    </div>
+    <div class="fixed bottom-10 flex px-10 md:px-0 w-full md:w-4/5 lg:w-3/5 items-center">
+        <div id="composer-background" class="flex w-full cursor-text flex-col rounded-3xl px-2.5 py-1 transition-colors contain-inline-size bg-[#f4f4f4] dark:bg-token-main-surface-secondary">
+            <div class="flex min-h-[44px] items-center px-2">
+                <div class="max-w-full flex-1">
+                    <textarea 
+                        id="user-input"
+                        class="block h-10 w-full resize-none border-0 outline-none bg-transparent px-0 py-2 text-token-text-primary placeholder:text-token-text-secondary" placeholder="Mensaje ChatBot" 
+                    ></textarea>
+                </div>
+            </div>
+            <div class="flex h-[44px] items-center justify-end">
+                <button 
+                    aria-label="Send prompt" 
+                    data-testid="send-button" 
+                    class="flex h-8 w-8 items-center justify-center rounded-full transition-colors hover:opacity-70 focus-visible:outline-none focus-visible:outline-black disabled:text-[#f4f4f4] disabled:hover:opacity-100 dark:focus-visible:outline-white disabled:dark:bg-token-text-quaternary dark:disabled:text-token-main-surface-secondary bg-black text-white dark:bg-white dark:text-black disabled:bg-[#D7D7D7]"
+                    onclick="sendMessage()"
+                >
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-2xl">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1918 8.90615C15.6381 8.45983 16.3618 8.45983 16.8081 8.90615L21.9509 14.049C22.3972 14.4953 22.3972 15.2189 21.9509 15.6652C21.5046 16.1116 20.781 16.1116 20.3347 15.6652L17.1428 12.4734V22.2857C17.1428 22.9169 16.6311 23.4286 15.9999 23.4286C15.3688 23.4286 14.8571 22.9169 14.8571 22.2857V12.4734L11.6652 15.6652C11.2189 16.1116 10.4953 16.1116 10.049 15.6652C9.60265 15.2189 9.60265 14.4953 10.049 14.049L15.1918 8.90615Z" fill="currentColor"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlazando correctamente el archivo JavaScript desde la carpeta estática -->
+    <script src="./script.js"></script>
+</body>
+</html>

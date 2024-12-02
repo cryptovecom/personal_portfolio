@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Avenir Next";
+  src: url("fonts/Avenir_Next_Font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -30,11 +37,14 @@ body {
 }
 
 .login-container h1 {
-  font-size: 28px;
+  font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  text-align: center;
   font-style: normal;
-  font-family: "Segoe UI Symbol";
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 32px;
+  color: #16191c;
   margin-bottom: 20px;
-  color: #333;
 }
 
 .login-container p {
@@ -60,6 +70,7 @@ body {
 }
 
 input[type="email"] {
+  font-size: 16px;
   width: 93%;
   padding: 10px;
   margin-bottom: 10px;
@@ -80,6 +91,7 @@ input[type="email"]:focus {
 }
 
 input[type="number"] {
+  font-size: 16px;
   width: 60%;
   padding: 10px;
   margin-bottom: 10px;
@@ -211,7 +223,7 @@ footer {
 
 .footer-container-sm .language-selector {
   padding: 0 30px;
-  width: 90%;
+  /* width: 90%; */
 }
 
 .footer-container-sm select {
@@ -346,7 +358,7 @@ footer {
   border-top: solid 1px #D4D4D4;
   margin-top: 0;
   padding: 10px 20px;
-  width: 100%;
+  /* width: 100%; */
   line-height: 25px;
   box-sizing: content-box;
   color: rgba(0, 0, 0, .87);
